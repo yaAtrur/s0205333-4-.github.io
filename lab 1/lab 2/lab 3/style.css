@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  /* чтобы padding и border входили в размер элемента */
+}
+
+
+/* ОСНОВА СТРАНИЦЫ */
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+  /* страница минимум на всю высоту экрана */
+
+  display: flex;
+  flex-direction: column;
+  /* элементы страницы идут сверху вниз */
+
+  font-family: Arial, sans-serif;
+
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+/* ШАПКА */
+
+#header {
+  width: 100%;
+  /* шапка на всю ширину */
+
+  background-color: #0AFFFF;
+
+  border-bottom: 1px solid #4676a8;
+  /* линия снизу */
+}
+
+#header .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* небольшой отступ от краёв */
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+
+  border: 1px solid #4676a8;
+  border-radius: 50%;
+  /* делаем круг */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* текст ровно по центру */
+
+  font-family: Georgia, serif;
+
+  flex-shrink: 0;
+  /* логотип не сжимается */
+}
+
+.site-title {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+  font-weight: normal;
+}
+
+
+/* НАВИГАЦИЯ */
+
+#nav {
+  width: 100%;
+  /* навигация на всю ширину */
+
+  background-color: #0AFFFF;
+
+  border-bottom: 1px solid #4676a8;
+}
+
+#nav .nav-link {
+  color: #000000;
+
+  font-family: Georgia, serif;
+
+  text-decoration: none;
+  /* убираем подчёркивание */
+}
+
+#nav .nav-link:hover {
+  text-decoration: underline;
+  /* при наведении подчёркиваем */
+}
+
+
+/* ОСНОВНОЙ КОНТЕНТ */
+
+main {
+  flex: 1;
+  /* занимает всё свободное место,
+     чтобы footer был внизу */
+}
+
+
+/* ЗАГОЛОВКИ */
+
+h2 {
+  font-family: Georgia, serif;
+
+  font-weight: normal;
+}
+
+
+/* СПИСОК ССЫЛОК */
+
+.links-list ul {
+  padding-left: 40px;
+  /* отступ списка слева */
+}
+
+.links-list li {
+  margin-bottom: 6px;
+  /* расстояние между ссылками */
+}
+
+
+/* ТАБЛИЦА */
+
+.table-section table {
+  width: 100%;
+  /* таблица на всю ширину */
+}
+
+.table-section th {
+  background-color: #0AFFFF;
+  /* цвет заголовков */
+}
+
+.table-section tbody tr:nth-child(odd) td {
+  background-color: #ffffff;
+} /* нечетные строки */
+
+.table-section tbody tr:nth-child(even) td {
+  background-color: #90faf5;
+} /* четные строки */
+
+
+/* ФОРМА */
+
+.form-section {
+  width: 100%;
+}
+
+.form-section .form-control {
+  max-width: 100%;
+  /* поле не вылезает за экран */
+}
+
+.form-section .form-select {
+  max-width: 100%;
+  /* список не вылезает за экран */
+}
+
+
+/* ИЗОБРАЖЕНИЯ */
+
+img {
+  max-width: 100%;
+  /* картинка уменьшается на маленьком экране */
+}
+
+
+/* FOOTER */
+
+#footer {
+  width: 100%;
+  /* footer на всю ширину */
+
+  background-color: #0AFFFF;
+
+  border-top: 1px solid #4676a8;
+  /* линия сверху */
+}
+
+#footer .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* отступ от краёв */
+}
+
+#footer p {
+  margin: 0;
+  padding: 15px 0;
+
+  font-family: Georgia, serif;
+}
+
+
+/* АДАПТИВНОСТЬ */
+
+/* от 768px — планшет и компьютер */
+
+@media (min-width: 768px) {
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    /* на большом экране логотип чуть больше */
+  }
+
+  .site-title {
+    font-size: 24px;
+    /* на большом экране заголовок больше */
+  }
+
+}

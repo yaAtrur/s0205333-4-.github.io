@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 4 — Bootstrap</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Подключаем Bootstrap — готовый CSS-фреймворк -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="header">
+  <div class="container-fluid px-3">
+    <!-- container-fluid — контейнер на всю ширину экрана
+         px-3 — отступы слева и справа -->
+
+    <div class="row align-items-center justify-content-between">
+      <!-- row — строка Bootstrap-сетки
+           align-items-center — выравнивание элементов по вертикали
+           justify-content-between — раздвигает элементы по краям -->
+
+      <div class="col-auto">
+        <!-- col-auto — колонка занимает столько места,
+             сколько нужно её содержимому -->
+
+        <div class="logo">Лого</div>
+
+      </div>
+
+      <div class="col-auto">
+
+        <h1 class="site-title mb-0">
+          <!-- mb-0 — убираем нижний margin Bootstrap -->
+
+          Задание 4
+        </h1>
+
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
+<nav id="nav">
+
+  <div class="container-fluid px-3">
+    <!-- container-fluid — на всю ширину
+         px-3 — отступы слева и справа -->
+
+    <ul class="nav flex-column flex-md-row gap-0 gap-md-3">
+      <!-- nav — Bootstrap-стиль навигации
+           flex-column — на телефоне ссылки вертикально
+           flex-md-row — от 768px ссылки становятся горизонтальными
+           gap-md-3 — расстояние между ссылками на больших экранах -->
+
+      <li class="nav-item">
+
+        <a class="nav-link px-0" href="index.html">
+          <!-- nav-link — оформление ссылки Bootstrap
+               px-0 — убираем горизонтальные отступы -->
+
+          Открыть главную страницу
+        </a>
+
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link px-0" href="https://kubsu.ru/">
+          Открыть сайт КубГУ
+        </a>
+
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link px-0" href="#data">
+          Перейти к данным
+        </a>
+
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+
+<main class="container py-4">
+  <!-- container — ограничивает ширину контента и центрирует его
+       py-4 — Bootstrap-отступ сверху и снизу -->
+
+  <div class="row g-4">
+    <!-- row — строка Bootstrap-сетки
+         g-4 — расстояние между элементами сетки -->
+
+
+    <section class="links-list order-2 order-md-1 col-12">
+      <!-- col-12 — занимает все 12 колонок сетки
+           order-2 — на телефоне второй элемент
+           order-md-1 — от 768px становится первым -->
+
+      <h2>Список гиперссылок</h2>
+
+      <ul>
+
+        <li>
+          <a href="http://kubsu.ru/">
+            КубГУ — HTTP
+          </a>
+        </li>
+
+        <li>
+          <a href="https://kubsu.ru/">
+            КубГУ — HTTPS
+          </a>
+        </li>
+
+        <li>
+          <a href="https://i.pinimg.com/originals/05/0b/01/050b01a87985a9245844420d04decbbf.png">
+
+            <img
+              src="image.jpg"
+              alt="Картинка"
+              width="200"
+              class="img-fluid"
+            >
+            <!-- img-fluid — делает изображение адаптивным,
+                 чтобы оно не выходило за ширину экрана -->
+
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            Внутренняя страница
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html">
+            Главная страница
+          </a>
+        </li>
+
+        <li>
+          <a href="#form">
+            Перейти к форме
+          </a>
+        </li>
+
+        <li>
+          <a href="parameters.html?name=student&group=123&course=3">
+            Ссылка с тремя параметрами
+          </a>
+        </li>
+
+        <li>
+          <a href="id.html">
+            Ссылка с параметром id
+          </a>
+        </li>
+
+        <li>
+          <a href="./current.html">
+            Страница текущего каталога
+          </a>
+        </li>
+
+        <li>
+          <a href="about/about-page.html">
+            Страница каталога about
+          </a>
+        </li>
+
+        <li>
+          <a href="../parent-page.html">
+            Страница уровнем выше
+          </a>
+        </li>
+
+        <li>
+          <a href="../../upper-page.html">
+            Страница двумя уровнями выше
+          </a>
+        </li>
+
+        <li>
+          <p>
+            Более подробную информацию можно найти
+            <a href="https://kubsu.ru/">
+              на официальном сайте КубГУ
+            </a>.
+          </p>
+        </li>
+
+        <li>
+          <a href="https://ru.ruwiki.ru/wiki/Кук,_Тим#Биография">
+            Фрагмент страницы стороннего сайта
+          </a>
+        </li>
+
+        <li>
+
+          <p>Карта изображения:</p>
+
+          <img
+            src="universitet.jpg"
+            alt="Карта изображения"
+            width="500"
+            height="300"
+            usemap="#image-map"
+            class="img-fluid"
+          >
+          <!-- img-fluid — адаптивное изображение -->
+
+          <map name="image-map">
+
+            <area
+              shape="rect"
+              coords="0,0,250,300"
+              href="https://kubsu.ru/"
+              alt="КубГУ"
+            >
+
+            <area
+              shape="circle"
+              coords="375,150,75"
+              href="https://ya.ru/"
+              alt="Яндекс"
+            >
+
+          </map>
+
+        </li>
+
+        <li>
+          <a href="">
+            Ссылка с пустым href
+          </a>
+        </li>
+
+        <li>
+          <a>
+            Ссылка без href
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://kubsu.ru/"
+            rel="nofollow"
+          >
+            Ссылка с запретом перехода поисковика
+          </a>
+        </li>
+
+        <li>
+          <a href="private.html">
+            Ресурс, запрещённый для индексации
+          </a>
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <section class="navigation-section order-3 col-12">
+      <!-- col-12 — вся ширина Bootstrap-сетки
+           order-3 — третий элемент по порядку -->
+
+      <h2>Навигация</h2>
+
+      <ol>
+
+        <li>
+          <a
+            href="index.html"
+            title="Главная страница сайта"
+          >
+            Главная
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="site.html"
+            title="Информация о сайте"
+          >
+            О сайте
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="contacts.html"
+            title="Контактная информация"
+          >
+            Контакты
+          </a>
+        </li>
+
+      </ol>
+
+    </section>
+
+
+    <section class="ftp-section order-4 col-12">
+      <!-- col-12 — занимает всю ширину
+           order-4 — четвёртый элемент -->
+
+      <h2>FTP</h2>
+
+      <a href="ftp://username:password@example.com/file.txt">
+        Файл на FTP-сервере с авторизацией
+      </a>
+
+    </section>
+
+
+    <section
+      id="data"
+      class="table-section order-1 order-md-2 col-12"
+    >
+      <!-- order-1 — на телефоне таблица первая
+           order-md-2 — от 768px таблица становится второй
+           col-12 — таблица занимает всю ширину -->
+
+      <h2>Таблица</h2>
+
+      <div class="table-responsive">
+        <!-- table-responsive — позволяет таблице прокручиваться
+             по горизонтали на маленьком экране -->
+
+        <table class="table table-bordered">
+          <!-- table — Bootstrap-оформление таблицы
+               table-bordered — добавляет границы ячеек -->
+
+          <thead>
+
+            <tr>
+              <th>Колонка 1</th>
+              <th>Колонка 2</th>
+              <th>Колонка 3</th>
+              <th>Колонка 4</th>
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Данные 1</td>
+              <td>Данные 2</td>
+              <td colspan="2">
+                Объединённая ячейка
+              </td>
+            </tr>
+
+            <tr>
+              <td>Данные 3</td>
+              <td>Данные 4</td>
+              <td>Данные 5</td>
+              <td>Данные 6</td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                Объединённая ячейка
+              </td>
+              <td>Данные 7</td>
+              <td>Данные 8</td>
+            </tr>
+
+            <tr>
+              <td>Данные 9</td>
+              <td>Данные 10</td>
+              <td>Данные 11</td>
+              <td>Данные 12</td>
+            </tr>
+
+            <tr>
+              <td>Данные 13</td>
+              <td colspan="3">
+                Объединённая ячейка
+              </td>
+            </tr>
+
+            <tr>
+              <td>Данные 14</td>
+              <td>Данные 15</td>
+              <td>Данные 16</td>
+              <td>Данные 17</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <section
+      id="form"
+      class="form-section order-5 col-12"
+    >
+      <!-- order-5 — форма пятая по порядку
+           col-12 — занимает всю ширину -->
+
+      <h2>Форма</h2>
+
+      <form action="/form.php" method="POST">
+
+        <label>
+          ФИО:<br>
+
+          <input
+            type="text"
+            name="fio"
+            class="form-control"
+          >
+          <!-- form-control — Bootstrap-стиль для полей формы -->
+
+        </label>
+
+        <br><br>
+
+
+        <label>
+          Телефон:<br>
+
+          <input
+            type="tel"
+            name="phone"
+            class="form-control"
+          >
+
+        </label>
+
+        <br><br>
+
+
+        <label>
+          E-mail:<br>
+
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+          >
+
+        </label>
+
+        <br><br>
+
+
+        <label>
+          Дата рождения:<br>
+
+          <input
+            type="date"
+            name="birthdate"
+            class="form-control"
+          >
+
+        </label>
+
+        <br><br>
+
+
+        Пол:<br>
+
+        <label>
+          <input
+            type="radio"
+            name="gender"
+            value="male"
+            class="form-check-input"
+          >
+          <!-- form-check-input — Bootstrap-оформление
+               переключателя -->
+
+          Мужской
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="gender"
+            value="female"
+            class="form-check-input"
+          >
+          Женский
+        </label>
+
+        <br><br>
+
+
+        <label>
+          Любимый язык программирования:<br>
+
+          <select
+            name="programming_languages[]"
+            multiple="multiple"
+            class="form-select"
+          >
+            <!-- form-select — Bootstrap-оформление
+                 выпадающего списка -->
+
+            <option value="Pascal">Pascal</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="Haskel">Haskel</option>
+            <option value="Clojure">Clojure</option>
+            <option value="Prolog">Prolog</option>
+            <option value="Scala">Scala</option>
+
+          </select>
+
+        </label>
+
+        <br><br>
+
+
+        <label>
+          Биография:<br>
+
+          <textarea
+            name="biography"
+            rows="7"
+            cols="50"
+            class="form-control"
+          ></textarea>
+          <!-- form-control — Bootstrap-стиль
+               для текстового поля -->
+
+        </label>
+
+        <br><br>
+
+
+        <label>
+
+          <input
+            type="checkbox"
+            name="contract"
+            value="yes"
+            class="form-check-input"
+          >
+          <!-- form-check-input — Bootstrap-оформление
+               checkbox -->
+
+          С контрактом ознакомлен(а)
+
+        </label>
+
+        <br><br>
+
+
+        <input
+          type="submit"
+          value="Сохранить"
+          class="btn btn-primary"
+        >
+        <!-- btn — Bootstrap-стиль кнопки
+             btn-primary — основной вариант кнопки -->
+
+      </form>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer id="footer">
+
+  <div class="container-fluid px-3">
+    <!-- container-fluid — вся ширина
+         px-3 — отступы слева и справа -->
+
+    <p>
+      (с) Артур Багян
+    </p>
+
+  </div>
+
+</footer>
+
+
+<!-- Подключаем JavaScript Bootstrap.
+     Нужен для интерактивных компонентов Bootstrap. -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
