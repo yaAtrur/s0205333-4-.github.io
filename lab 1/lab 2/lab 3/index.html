@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -18,83 +19,61 @@
 
 <body>
 
+
 <header id="header">
   <div class="container-fluid px-3">
     <!-- container-fluid — контейнер на всю ширину экрана
          px-3 — отступы слева и справа -->
 
-    <div class="row align-items-center justify-content-between">
+    <div class="row align-items-center py-2">
       <!-- row — строка Bootstrap-сетки
-           align-items-center — выравнивание элементов по вертикали
-           justify-content-between — раздвигает элементы по краям -->
+           align-items-center — выравнивание по вертикали
+           py-2 — вертикальные отступы Bootstrap -->
 
       <div class="col-auto">
-        <!-- col-auto — колонка занимает столько места,
-             сколько нужно её содержимому -->
-
+        <!-- col-auto — колонка по размеру содержимого -->
         <div class="logo">Лого</div>
-
       </div>
 
-      <div class="col-auto">
-
-        <h1 class="site-title mb-0">
-          <!-- mb-0 — убираем нижний margin Bootstrap -->
-
-          Задание 4
-        </h1>
-
+      <div class="col">
+        <h1 class="site-title mb-0">Задание 4</h1>
       </div>
+
+      <nav id="nav" class="col-12 col-md">
+        <!-- col-12 — на телефоне навигация занимает всю строку
+             col-md — на компьютере занимает оставшееся место -->
+
+        <ul class="nav flex-column flex-md-row align-items-start align-items-md-center justify-content-md-end">
+          <!-- flex-column — ссылки вертикально на телефоне
+               flex-md-row — горизонтально на компьютере
+               align-items-start — ссылки слева на телефоне
+               justify-content-md-end — ссылки справа на компьютере -->
+
+          <li class="nav-item">
+            <a class="nav-link px-0 py-1" href="index.html">
+              Открыть главную страницу
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link px-0 py-1" href="https://kubsu.ru/">
+              Открыть сайт КубГУ
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link px-0 py-1" href="#data">
+              Перейти к данным
+            </a>
+          </li>
+
+        </ul>
+      </nav>
 
     </div>
-
   </div>
 </header>
 
-
-<nav id="nav">
-
-  <div class="container-fluid px-3">
-    <!-- container-fluid — на всю ширину
-         px-3 — отступы слева и справа -->
-
-    <ul class="nav flex-column flex-md-row gap-0 gap-md-3">
-      <!-- nav — Bootstrap-стиль навигации
-           flex-column — на телефоне ссылки вертикально
-           flex-md-row — от 768px ссылки становятся горизонтальными
-           gap-md-3 — расстояние между ссылками на больших экранах -->
-
-      <li class="nav-item">
-
-        <a class="nav-link px-0" href="index.html">
-          <!-- nav-link — оформление ссылки Bootstrap
-               px-0 — убираем горизонтальные отступы -->
-
-          Открыть главную страницу
-        </a>
-
-      </li>
-
-      <li class="nav-item">
-
-        <a class="nav-link px-0" href="https://kubsu.ru/">
-          Открыть сайт КубГУ
-        </a>
-
-      </li>
-
-      <li class="nav-item">
-
-        <a class="nav-link px-0" href="#data">
-          Перейти к данным
-        </a>
-
-      </li>
-
-    </ul>
-
-  </div>
-</nav>
 
 
 <main class="container py-4">
@@ -385,14 +364,13 @@
             </tr>
 
             <tr>
-              <td>Данные 9</td>
+              <td rowspan="2">Данные 9 / Данные 13</td>
               <td>Данные 10</td>
               <td>Данные 11</td>
               <td>Данные 12</td>
             </tr>
 
             <tr>
-              <td>Данные 13</td>
               <td colspan="3">
                 Объединённая ячейка
               </td>
@@ -606,13 +584,6 @@
 
 </footer>
 
-
-<!-- Подключаем JavaScript Bootstrap.
-     Нужен для интерактивных компонентов Bootstrap. -->
-
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
 
 </body>
 </html>
